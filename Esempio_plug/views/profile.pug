@@ -5,17 +5,18 @@ html
     link(rel='stylesheet', href='/css/style.css')
     meta(name="viewport" content="width=device-width, initial-scale=1")
  body
-    header.header
-    h1 #{title}
+    header.header About 
     div.profile
-        div.profile-image(style=`background: url('/images/${person.imgSrc}') top center
-        no-repeat; background-size: cover;`)
             div.profile-details
+                img(src=`/images/${person.imgSrc}`, alt="").person-image
+                h1 #{title}
                 h1.profile-name
                 | #{person.firstname} #{person.lastname}
+                br
                 h2.profile-tagline
                 | #{person.tagline}
+                br
                 p.profile-bio
                 | #{person.bio}
-                a.button.button-twitter(href=`${person.twitter}`)
-                | Follow me on Twitter
+                br
+                a.button.button-twitter(href=`${person.twitter}`) Follow me on Twitter
